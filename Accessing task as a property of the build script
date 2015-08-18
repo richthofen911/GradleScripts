@@ -1,0 +1,11 @@
+task hello << {
+    println 'Hello world!'
+}
+hello.doLast {
+    println "Greetings from the $hello.name task."
+}
+
+outputs:
+> gradle -q hello
+Hello world!
+Greetings from the hello task.
