@@ -1,0 +1,19 @@
+task hello << {
+    println 'Hello Earth'
+}
+hello.doFirst {
+    println 'Hello Venus'
+}
+hello.doLast {
+    println 'Hello Mars'
+}
+hello << {
+    println 'Hello Jupiter'
+}
+
+输出结果：
+> gradle -q hello
+Hello Venus
+Hello Earth
+Hello Mars
+Hello Jupiter
