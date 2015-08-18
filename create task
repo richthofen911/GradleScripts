@@ -1,0 +1,11 @@
+::basic task define
+  task hello {
+    doLast {
+      println 'Hello world!'
+    }
+  }
+  
+::shortcut task define
+  task hello << {
+    println 'Hello world!'
+  }
